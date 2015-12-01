@@ -27,4 +27,11 @@ namespace Doctrine\ORM;
  */
 class NonUniqueResultException extends UnexpectedResultException
 {
+      /**
+     * Constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct('More than one result was found for query although one row or none was expected.');
+    }
 }
